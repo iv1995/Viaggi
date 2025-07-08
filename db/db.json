@@ -1,0 +1,81 @@
+{
+  "viaggi": [
+    {
+      "id": "1",
+      "destinazione": "Hawaii",
+      "prezzo": "€1850",
+      "immagine": "./db/public/img/hawaii.jpg",
+      "disponibilita": true
+    },
+    {
+      "id": "2",
+      "destinazione": "Rio de Janeiro, Brasile",
+      "prezzo": "€1250",
+      "immagine": "./db/public/img/rio-brasile.jpg",
+      "disponibilita": true
+    },
+    {
+      "id": "3",
+      "destinazione": "New York, Stati Uniti",
+      "prezzo": "€1400",
+      "immagine": "./db/public/img/new-york.jpg",
+      "disponibilita": false
+    },
+    {
+      "id": "4",
+      "destinazione": "Marrakech, Marocco",
+      "prezzo": "€750",
+      "immagine": "./db/public/img/marrakech.jpg",
+      "disponibilita": true
+    },
+    {
+      "id": "5",
+      "destinazione": "Tokyo, Giappone",
+      "prezzo": "€1650",
+      "immagine": "./db/public/img/tokyo.jpg",
+      "disponibilita": true
+    },
+    {
+      "id": "6",
+      "destinazione": "Vancouver, Canada",
+      "prezzo": "€1200",
+      "immagine": "./db/public/img/vancouver.jpg",
+      "disponibilita": false
+    },
+    {
+      "id": "7",
+      "destinazione": "Tallinn, Estonia",
+      "prezzo": "€420",
+      "immagine": "./db/public/img/tallin.jpg",
+      "disponibilita": true
+    },
+    {
+      "id": "8",
+      "destinazione": "Maldive",
+      "prezzo": "€2200",
+      "immagine": "./db/public/img/maldive.jpg",
+      "disponibilita": true
+    },
+    {
+      "id": "9",
+      "destinazione": "Bali, Indonesia",
+      "prezzo": "€1100",
+      "immagine": "./db/public/img/bali.jpg",
+      "disponibilita": false
+    },
+    {
+      "id": "10",
+      "destinazione": "Islanda",
+      "prezzo": "€980",
+      "immagine": "./db/public/img/islanda.jpg",
+      "disponibilita": true
+    }
+  ],
+  "carrello": [
+    {
+      "id": "1",
+      "destinazione": "Hawaii",
+      "prezzo": "€1850"
+    }
+  ]
+}
