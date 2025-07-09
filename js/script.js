@@ -35,16 +35,6 @@ function getViaggi(){
  * @param {Viaggio} viaggio 
  */
 function creaCard(viaggio){
-    // <div class="col-4">
-    // <div class="card">
-    //     <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-    //     <div class="card-body">
-    //         <h4 class="card-title">Title</h4>
-    //         <p class="card-text">Text</p>
-    //     </div>
-    // </div>
-    // </div>
-
 
     let card = document.createElement("div");
     card.setAttribute("class", "col-4");
@@ -100,7 +90,7 @@ function creaCard(viaggio){
 function addInCarrello(viaggio){
     const URL = "http://localhost:3000/carrello";
 
-    //Creo un oggetto "a metà" passando solo le info che mi servono nel carrello
+    //Passo solo le informazioni che mi servono nel carrello
     let viaggioDaCarrello = {
         id: viaggio.id,
         destinazione: viaggio.destinazione,

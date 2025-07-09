@@ -69,6 +69,7 @@ function creaCard(viaggio){
     // }
     btn.addEventListener("click", function(){
         rimuoviDalCarrello(viaggio);
+        location.reload();
     })
 
     cardBody.appendChild(h4);
