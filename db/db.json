@@ -77,12 +77,6 @@
       "destinazione": "Hawaii",
       "prezzo": "€1850",
       "immagine": "./db/public/img/hawaii.jpg"
-    },
-    {
-      "id": "2",
-      "destinazione": "Rio de Janeiro, Brasile",
-      "prezzo": "€1250",
-      "immagine": "./db/public/img/rio-brasile.jpg"
     }
   ]
 }

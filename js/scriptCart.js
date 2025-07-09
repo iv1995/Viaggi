@@ -64,11 +64,11 @@ function creaCard(viaggio){
     let btn = document.createElement("button");
     btn.setAttribute("class", "btn btn-primary");
     btn.textContent = "Annulla"
-    if(!viaggio.disponibilita){
-        btn.setAttribute("disabled", true);
-    }
+    // if(!viaggio.disponibilita){
+    //     btn.setAttribute("disabled", true);
+    // }
     btn.addEventListener("click", function(){
-        addInCarrello(viaggio);
+        rimuoviDalCarrello(viaggio);
     })
 
     cardBody.appendChild(h4);
@@ -87,25 +87,15 @@ function creaCard(viaggio){
 /**
  * @param {Viaggio} viaggio 
  */
-function addInCarrello(viaggio){
-    const URL = "http://localhost:3000/carrello";
-
-    //Creo un oggetto "a metà" passando solo le info che mi servono nel carrello
-    let viaggioDaCarrello = {
-        id: viaggio.id,
-        destinazione: viaggio.destinazione,
-        prezzo: viaggio.prezzo,
-        immagine: viaggio.immagine
-    }
+function rimuoviDalCarrello(viaggio){
+    const URL = "http://localhost:3000/carrello/" + viaggio.id;
 
     //uso la fetch con il metodo post per registrare un viaggio nel carrello
     fetch(URL, {
-        method: "POST",
+        method: "DELETE",
         headers: {
             "Content-Type": "application/json"
-        },
-        //dentro il body passo l'oggetto formato json (string) che voglio registrare
-        body: JSON.stringify(viaggioDaCarrello)
+        }
     })
     .then(data =>{
         console.log(data);
