@@ -12,7 +12,7 @@ let showroom = document.querySelector("#showroom");
 
 
 function getViaggi(){
-    const URL = "http://localhost:3000/viaggi";
+    const URL = "http://localhost:3000/carrello";
     try{
         fetch(URL)
         .then(data => {
@@ -35,16 +35,6 @@ function getViaggi(){
  * @param {Viaggio} viaggio 
  */
 function creaCard(viaggio){
-    // <div class="col-4">
-    // <div class="card">
-    //     <img class="card-img-top" src="holder.js/100x180/" alt="Title" />
-    //     <div class="card-body">
-    //         <h4 class="card-title">Title</h4>
-    //         <p class="card-text">Text</p>
-    //     </div>
-    // </div>
-    // </div>
-
 
     let card = document.createElement("div");
     card.setAttribute("class", "col-4");
@@ -73,7 +63,7 @@ function creaCard(viaggio){
 
     let btn = document.createElement("button");
     btn.setAttribute("class", "btn btn-primary");
-    btn.textContent = "Compra"
+    btn.textContent = "Annulla"
     if(!viaggio.disponibilita){
         btn.setAttribute("disabled", true);
     }
@@ -105,7 +95,7 @@ function addInCarrello(viaggio){
         id: viaggio.id,
         destinazione: viaggio.destinazione,
         prezzo: viaggio.prezzo,
-        immagine: viaggio.immagine        
+        immagine: viaggio.immagine
     }
 
     //uso la fetch con il metodo post per registrare un viaggio nel carrello
