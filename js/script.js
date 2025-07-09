@@ -37,7 +37,7 @@ function getViaggi(){
 function creaCard(viaggio){
 
     let card = document.createElement("div");
-    card.setAttribute("class", "col-4");
+    card.setAttribute("class", "col-4 mb-4");
 
     let innerCard = document.createElement("div");
     innerCard.setAttribute("class", "card");
