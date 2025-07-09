@@ -91,18 +91,20 @@ function creaCard(viaggio){
 function rimuoviDalCarrello(viaggio){
     const URL = "http://localhost:3000/carrello/" + viaggio.id;
 
-    //uso la fetch con il metodo post per registrare un viaggio nel carrello
-    fetch(URL, {
-        method: "DELETE",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-    .then(data =>{
-        console.log(data);
-    })
-
-
+    try{
+        //uso la fetch con il metodo post per registrare un viaggio nel carrello
+        fetch(URL, {
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            }
+        })
+        .then(data =>{
+            console.log(data);
+        })
+    }catch(error){
+        console.log(error);
+    }
 }
 
 document.addEventListener("DOMContentLoaded", getViaggi);
