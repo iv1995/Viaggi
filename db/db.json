@@ -77,6 +77,12 @@
       "destinazione": "Hawaii",
       "prezzo": "€1850",
       "immagine": "./db/public/img/hawaii.jpg"
+    },
+    {
+      "id": "8",
+      "destinazione": "Maldive",
+      "prezzo": "€2200",
+      "immagine": "./db/public/img/maldive.jpg"
     }
   ]
 }

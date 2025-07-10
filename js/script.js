@@ -111,11 +111,11 @@ function addInCarrello(viaggio){
 
         /*setTimeout() example*/
 
-        document.querySelector("#mainCont").innerHTML = `
-        <div class="d-flex justify-content-center">
-            <div class="spinner-border" role="status">
-            </div>
-        </div>`;
+        // document.querySelector("#mainCont").innerHTML = `
+        // <div class="d-flex justify-content-center">
+        //     <div class="spinner-border" role="status">
+        //     </div>
+        // </div>`;
 
         console.log(data);
     })
