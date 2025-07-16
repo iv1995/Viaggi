@@ -69,6 +69,20 @@
       "prezzo": "€980",
       "immagine": "./db/public/img/islanda.jpg",
       "disponibilita": true
+    },
+    {
+      "id": "11",
+      "destinazione": "desti",
+      "prezzo": "7000",
+      "immagine": "immagine",
+      "disponibilita": true
+    },
+    {
+      "id": "12",
+      "destinazione": "destinazione",
+      "prezzo": "1100",
+      "immagine": "immagine",
+      "disponibilita": true
     }
   ],
   "carrello": [
