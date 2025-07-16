@@ -8,27 +8,16 @@ class Viaggio{
     }
 }
 
+let b = document.getElementById("send");
+b.setAttribute("onclick", "process()");
+
 function process(){
-    let viaggio = {};
 
-    viaggio.immagine;
+    let destination = document.getElementById("destination");
+    let price = document.getElementById("price");
+    let image = document.getElementById("image");
 
-    let cardBody = document.createElement("div");
-    cardBody.setAttribute("class", "card-body");
+    const v = new Viaggio("1", destination.value, price.value, image.value, "true");
 
-    let h4 = document.createElement("h4");
-    h4.setAttribute("class", "card-title");
-    h4.textContent = viaggio.destinazione;
-
-    let p1 = document.createElement("p");
-    p1.setAttribute("class", "card-text");
-    p1.textContent = `€ ${viaggio.prezzo}`;
-
-    let p2 = document.createElement("p");
-    p2.setAttribute("class", "card-text");
-    p2.textContent = `disponibilità: ${viaggio.disponibilita}`;
-
-    let btn = document.createElement("button");
-    btn.setAttribute("class", "btn btn-primary");
-    btn.textContent = "Annulla";
+    alert(v.destinazione);
 }
