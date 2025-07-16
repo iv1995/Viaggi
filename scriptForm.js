@@ -1,3 +1,5 @@
+let max = 0;
+
 class Viaggio{
     constructor(id, destinazione, prezzo, immagine, disponibilita){
         this.id = id;
@@ -21,3 +23,31 @@ function process(){
 
     alert(v.destinazione);
 }
+
+function findMaxId(){
+
+    const URL = "http://localhost:3000/viaggi";
+    try{
+        fetch(URL)
+        .then(data => {
+            //inserire regole per controllare 
+            return data.json();
+        })
+        .then(response => {
+            //response è un array da 10 oggetti
+            console.log(response);
+            response.forEach(viaggio => {
+                if (viaggio.id > max){
+                    max = viaggio.id;
+                    localStorage.setItem("max", max);
+                }
+            });
+        })
+    }catch (error){
+        console.error("Errore nella fetch: ", error);
+    }
+}
+
+document.addEventListener("DOMContentLoaded", findMaxId);
+
+alert(localStorage.getItem("max"));
