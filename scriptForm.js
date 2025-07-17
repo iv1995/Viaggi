@@ -44,10 +44,11 @@ function process(){
 
     let destination = document.getElementById("destination");
     let price = document.getElementById("price");
-    let image = document.getElementById("image");
+    let image = "./db/public/img/" + destination.value + ".jpg";
+    let disponibilita = true;
     let id = localStorage.getItem("max");
 
-    const v = new Viaggio(id, destination.value, price.value, image.value, true);
+    const v = new Viaggio(id, destination.value, price.value, image, disponibilita.value);
     addInViaggi(v);
 }
 
