@@ -44,7 +44,7 @@ function process(){
 
     let destination = document.getElementById("destination");
     let price = document.getElementById("price");
-    let image = "./db/public/img/" + destination.value + ".jpg";
+    let image = "./db/public/img/" + document.getElementById("immagine").value + ".jpg";
     let disponibilita = getRadioValue("availability");
     let id = localStorage.getItem("max");
 

@@ -69,6 +69,13 @@
       "prezzo": "€980",
       "immagine": "./db/public/img/islanda.jpg",
       "disponibilita": true
+    },
+    {
+      "id": "11",
+      "destinazione": "New York, Stati Uniti",
+      "prezzo": "7600",
+      "immagine": "./db/public/img/new-york.jpg",
+      "disponibilita": true
     }
   ],
   "carrello": [
