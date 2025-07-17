@@ -45,10 +45,10 @@ function process(){
     let destination = document.getElementById("destination");
     let price = document.getElementById("price");
     let image = "./db/public/img/" + destination.value + ".jpg";
-    let disponibilita = true;
+    let disponibilita = getRadioValue("availability");
     let id = localStorage.getItem("max");
 
-    const v = new Viaggio(id, destination.value, price.value, image, disponibilita.value);
+    const v = new Viaggio(id, destination.value, price.value, image, disponibilita);
     addInViaggi(v);
 }
 
@@ -78,17 +78,23 @@ function addInViaggi(viaggio){
         body: JSON.stringify(viaggioDaCarrello)
     })
     .then(data =>{
-
-        /*setTimeout() example*/
-
-        // document.querySelector("#mainCont").innerHTML = `
-        // <div class="d-flex justify-content-center">
-        //     <div class="spinner-border" role="status">
-        //     </div>
-        // </div>`;
-
         console.log(data);
     })
 
 
+}
+
+function getRadioValue(radioName){
+
+    let value = false;
+    let radio = document.getElementsByName(radioName);
+
+    for(let i = 0; i < radio.length; i++){
+        if(radio[i].checked){
+            if(radio[i].value === 'true')
+                value = true;
+        }
+    }
+
+    return value;
 }
